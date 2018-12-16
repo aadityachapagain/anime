@@ -5,6 +5,7 @@ from matplotlib.animation import FuncAnimation
 import matplotlib
 matplotlib.use("TkAgg")
 
+
 class UpdateDist(object):
     def __init__(self, ax, prob=0.5):
         self.success = 0
@@ -42,6 +43,6 @@ class UpdateDist(object):
 
 fig, ax = plt.subplots()
 ud = UpdateDist(ax, prob=0.7)
-anim = FuncAnimation(fig, ud, frames=np.arange(100), init_func=ud.init,
+anim = FuncAnimation(fig, ud, frames=np.arange(200), init_func=ud.init,
                      interval=100, blit=True,repeat=False)
 plt.show()
